@@ -17,11 +17,11 @@ reddit = praw.Reddit(client_id='TX0T6V1mevTgnZ-PT_CW4A',  # this passes in my da
 subreddits = ['lexfridman', 'samharris', 'JordanPeterson']
 pos = 0
 
-title = "I am a Lex Fridman bot"
+title = "I am a Lex Fridman bot" #what my bot will post 
 url = "https://lexfridman.com/"
 
 
-def post():
+def post(): #method to post onto subreddits
     global subbreddits
     global pos
 
@@ -31,9 +31,9 @@ def post():
 pos = pos + 1   # adjusts for position in subreddit array
 post()
 
+#parses through subreddits in array I created
 if (pos <= len(subreddits) - 1):
     post()
 else:
     print("Done")
-
 post()
